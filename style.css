@@ -1,0 +1,290 @@
+:root{
+    --main-color:#555555;
+    --secondary-color: #2c4755;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1 {
+    display: block;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+button {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 128px;
+    height: 51.2px;
+    border-radius: 2rem;
+}
+/* End Golobal declarations */
+
+/* Start of header declarations*/
+
+header > .container{
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.porfolio-name{
+    font-size: 2rem;
+}
+
+header ul{
+    gap: 2rem;
+    list-style: none;
+    display: flex;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    transition: 300ms all ease;
+}
+
+a:hover{
+    color: grey;
+}
+
+header .container a:hover{
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+header .container .toggle-btn{
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: none;
+}
+
+header .container .toggle-btn:hover{
+    opacity: 0.6;
+}
+
+.drop-down-menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 200px;
+    background-color: rgb(235, 235, 235);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.drop-down-menu.open{
+    height: 200px;
+}
+
+.drop-down-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* End of header declarations*/
+
+/* Start of about-me declarations*/
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-me .img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.about-me .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.content .text p{
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    font-size: larger;
+}
+
+.content .text .profession{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+}
+
+.content .text h1{
+    font-size: 3rem;
+    text-align: center;
+    font-stretch: expanded;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.btn-menu *{
+    cursor: pointer;
+}
+
+.btn-menu .first{
+    background-color: white;
+    border: black 0.1rem solid;
+}
+
+.btn-menu .first:hover{
+    background-color: rgb(53, 53, 53);
+    border: rgb(53, 53, 53)0.1rem solid;
+    color: white;
+}
+
+.btn-menu .second{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-menu .second:hover{
+    background-color: black;
+    border: black 0.1rem solid;
+    color: white;
+}
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    transition: all ease 300ms;
+}
+
+.icon:hover{
+    opacity: 0.7;
+}
+
+/* Large */
+@media (max-width: 1200px) {
+    .container {
+    width: 1100px;
+    }
+}
+
+/* Medium */
+@media (max-width: 992px) {
+    header > .container > .toggle-btn{
+        display: block;
+    }
+
+    header > .container > ul{
+        display: none;
+    }
+    .container {
+    width: 970px;
+    }
+    .content .text h1 {
+        font-size: 2.5rem;
+    }
+    .content .text .profession{
+        font-size: 1.1rem;
+    }
+    .content .img img{
+        width: 275px;
+        height: 275px;
+    }
+    header .porfolio-name span{
+        font-size: 1.80rem;
+    }
+    .content .text .btn-menu button{
+        width: 128px;
+        height: 51.2px;
+    }
+    .drop-down-menu {
+        display: block;
+    }
+}
+
+/* Small */
+@media (max-width: 768px) {
+    .container {
+    width: 750px;
+    }
+    .content .text h1 {
+        font-size: 2rem;
+    }
+    .content .text .profession{
+        font-size: 1rem;
+    }
+    .content .img img{
+        width: 250px;
+        height: 250px;
+    }
+    header .porfolio-name span{
+        font-size: 1.70rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+    width: 750px;
+    }
+    .content .text h1 {
+        font-size: 1.5rem;
+    }
+    .content .text .profession{
+        font-size: 0.8rem;
+    }
+    .content .img img{
+        width: 250px;
+        height: 250px;
+    }
+    header .porfolio-name span{
+        font-size: 1.30rem;
+    }
+}
