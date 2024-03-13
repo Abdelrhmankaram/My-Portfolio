@@ -53,7 +53,7 @@ button {
 
 header > .container{
     width: 100%;
-    height: 100px;
+    height: 17vh;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -125,25 +125,29 @@ header .container .toggle-btn:hover{
 
 /* End of header declarations*/
 
-/* Start of about-me declarations*/
+/* Start of intro declarations*/
+
+.intro{
+    height: 83vh;
+}
 
 .content{
     display: flex;
     flex-wrap: wrap;
 }
 
-.about-me .img img{
-    width: 300px;
-    height: 300px;
+.intro .img img{
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
 }
 
-.about-me .content{
+.intro .content{
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 40px;
-    margin-top: 60px;
+    margin: 70px 0;
     text-align: center;
 }
 
@@ -208,11 +212,78 @@ header .container .toggle-btn:hover{
 .icon:hover{
     opacity: 0.7;
 }
+/* End of intro declarations*/
+
+/* Start of info declarations*/
+
+.about-me {
+    padding-top: 4vh;
+    height: 100vh;
+    text-align: center;
+}
+
+.about-me .container{
+    width: 75%;
+}
+
+.about-me .experiences{
+    gap: 4rem;
+    height: 80%;
+    display: flex;
+}
+
+.about-me .experiences .left{
+    width: 400px;
+    height: 400px;
+    margin: auto 0;
+}
+
+.about-me .experiences .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me .experiences .right > .up{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-me .experiences .left{
+    text-align: center;
+    width: 100%;
+}
+
+.about-me .experiences .left img{
+    width: 400px;
+    height: 400px;
+    filter: grayscale(3);
+    border-radius: 10px;
+}
+
+.box{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+/* End of info declarations*/
+
 
 /* Large */
 @media (max-width: 1200px) {
     .container {
     width: 1100px;
+    }
+    .about-me .experiences{
+        flex-direction: column;
     }
 }
 
