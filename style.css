@@ -236,6 +236,7 @@ header .container .toggle-btn:hover{
     width: 400px;
     height: 400px;
     margin: auto 0;
+    display: flex;
 }
 
 .about-me .experiences .right{
@@ -250,11 +251,6 @@ header .container .toggle-btn:hover{
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-}
-
-.about-me .experiences .left{
-    text-align: center;
-    width: 100%;
 }
 
 .about-me .experiences .left img{
@@ -338,6 +334,20 @@ header .container .toggle-btn:hover{
     }
     header .porfolio-name span{
         font-size: 1.70rem;
+    }
+
+    .about-me .experiences .left{
+        width: 100%;
+        height: auto;
+        margin: auto 0;
+        display: flex;
+    }
+    
+    .about-me .experiences .left img{
+        width: 100%;
+        height: auto;
+        filter: grayscale(3);
+        border-radius: 10px;
     }
 }
 
